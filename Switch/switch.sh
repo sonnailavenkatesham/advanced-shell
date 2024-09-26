@@ -22,8 +22,9 @@ read package
 
 case $package in
 
-    1)
-        if [ $nginx -eq 0 ]; then
+    1)  
+        $nginx  
+        if [ $? -eq 0 ]; then
             echo -e  "$Y package alreay installed $N"
             exit 1
         else
