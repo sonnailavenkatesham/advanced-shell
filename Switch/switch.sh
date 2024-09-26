@@ -40,12 +40,12 @@ case $package in
             echo -e  "$Y package alreay installed $N"
             exit 1
         else
-        echo -e "$G Installing redis package $N"
-        yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
-        yum module enable redis:remi-6.2 -y
-        sed -i 's/127.0.0.1/0.0.0.0/g' /etc/redis/redis.conf
-        systemctl enable redis
-        systemctl start redis
+            echo -e "$G Installing redis package $N"
+            yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
+            yum module enable redis:remi-6.2 -y
+            sed -i 's/127.0.0.1/0.0.0.0/g' /etc/redis/redis.conf
+            systemctl enable redis
+            systemctl start redis
         fi
         ;;
     3)  
@@ -54,10 +54,10 @@ case $package in
             echo -e  "$Y package alreay installed $N"
             exit 1
         else
-        echo -e "$G Installing nodejs package $N"
-        dnf module disable nodejs -y
-        dnf module enable nodejs:18 -y
-        dnf install nodejs -y
+            echo -e "$G Installing nodejs package $N"
+            dnf module disable nodejs -y
+            dnf module enable nodejs:18 -y
+            dnf install nodejs -y
         fi
         ;;
     4)
