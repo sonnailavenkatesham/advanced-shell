@@ -16,8 +16,8 @@ echo "2) redis"
 echo "3) nodejs"
 echo "4) mongodb"
 echo "5) exit"
-
-read -p -e "Please select package\n:" package
+echo ""Please select package\n:" 
+read package
 
 case $package in
 
