@@ -4,7 +4,8 @@ id=`id -u`
 G="\e[32m"
 N="\e[0m"
 R="\e[31m"
-
+Y="\e[31m"
+nginx=`yum list installed | grep nginx`
 if [ $id -ne 0 ]; then
     echo -e "$R Please run as root user $N"
     exit 1
@@ -22,10 +23,15 @@ read package
 case $package in
 
     1)
-        echo -e "$G installing nginx package $N"
-        yum install nginx -y
-        systemctl statrt nginx
-        systemctl enable nginx 
+        if [ $nginx -eq 0 ]; then
+            echo -e  "$Y package alreay installed $N"
+            exit 1
+        else
+            echo -e "$G installing nginx package $N"
+            yum install nginx -y
+            systemctl statrt nginx
+            systemctl enable nginx
+        fi    
         ;;
     2)
         echo -e "$G Installing redis package $N"
