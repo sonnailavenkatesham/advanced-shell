@@ -17,7 +17,7 @@ echo "3) nodejs"
 echo "4) mongodb"
 echo "5) exit"
 
-read -p "Please select package: \n" package
+read -p "Please select package\n" package
 
 case $package in
 
