@@ -55,5 +55,4 @@ case $package in
         ;;
     6)
         echo -e "$R please select above options $N"
-        ;;
 esac
