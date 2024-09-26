@@ -1,6 +1,6 @@
 #!/bin/bash
 
-id=`id`
+id=`id -u`
 G="\e[32m"
 N="\e[0m"
 R="\e[31m"
