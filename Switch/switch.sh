@@ -17,7 +17,7 @@ echo "3) nodejs"
 echo "4) mongodb"
 echo "5) exit"
 
-read -p "Please select package: " package
+read -p "Please select package: \n" package
 
 case $package in
 
@@ -51,4 +51,6 @@ case $package in
         ;;
     5)
         echo -e "$R exiting $N"
+    6)
+        echo -e "$R please select above options #R"
 esac
