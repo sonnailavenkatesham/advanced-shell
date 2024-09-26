@@ -51,6 +51,7 @@ case $package in
         ;;
     5)
         echo -e "$R exiting $N"
+        ;;
     6)
         echo -e "$R please select above options #R"
 esac
