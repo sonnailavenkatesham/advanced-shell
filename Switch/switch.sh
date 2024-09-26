@@ -22,8 +22,8 @@ read package
 
 case $package in
 
-    1)  
-        $nginx  
+    1)   
+        yum list installed | grep nginx
         if [ $? -eq 0 ]; then
             echo -e  "$Y package alreay installed $N"
             exit 1
