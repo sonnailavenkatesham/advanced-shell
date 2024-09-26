@@ -1,9 +1,11 @@
 #!/bin/bash
+
 id=$(id)
-if [ $id -ne 0 ]
+
 G="\e[32m"
 N="\e[0m"
 R="\e[31m"
+if [ $id -ne 0 ]
 then
     echo "Please run as root user"
     exit 1
