@@ -14,8 +14,7 @@ echo "Below are list of packages to install "
 echo "1) nginx"
 echo "2) redis"
 echo "3) nodejs"
-echo "4) mongodb"
-echo "5) exit"
+echo "4) exit"
 
 echo "Please select package\n" 
 read package
@@ -45,12 +44,6 @@ case $package in
 
         ;;
     4)
-        echo -e "$G Installing mongodb packeage $N"
-        yum install mongo -y
-        systemctl enable mongod
-        systemctl start mongod
-        ;;
-    5)
         echo -e "$R exiting $N"
         ;;
     *)
