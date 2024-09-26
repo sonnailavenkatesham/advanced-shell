@@ -5,9 +5,8 @@ id=$(id)
 G="\e[32m"
 N="\e[0m"
 R="\e[31m"
-if [ $id -ne 0 ]
-then
-    echo "Please run as root user"
+if [ $id -ne 0 ] then
+    echo -e "$R Please run as root user $N"
     exit 1
 fi
 
@@ -18,7 +17,7 @@ echo "3) nodejs"
 echo "4) mongodb"
 echo "5) exit"
 
-read -p "Please select package" package
+read -p "Please select package: " package
 
 case $package in
 
