@@ -4,7 +4,7 @@ id=`id -u`
 G="\e[32m"
 N="\e[0m"
 R="\e[31m"
-Y="\e[31m"
+Y="\e[30m"
 nginx=`yum list installed | grep nginx`
 if [ $id -ne 0 ]; then
     echo -e "$R Please run as root user $N"
