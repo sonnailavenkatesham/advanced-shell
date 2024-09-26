@@ -46,7 +46,7 @@ case $package in
         ;;
     4)
         echo -e "$G Installing mongodb packeage $N"
-        yum install mongodb-org -y
+        yum install mongo -y
         systemctl enable mongod
         systemctl start mongod
         ;;
